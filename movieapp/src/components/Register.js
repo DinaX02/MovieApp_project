@@ -6,10 +6,9 @@ import { Link } from "react-router-dom";
 export function Register() {
   return (
     <div className="div_center_login background_Login">
-      <div className="div_center_login">
         <Link to={"/"}><Logo className={"logo"} /></Link>
 
-        <div className="input_email">
+        <div className="input">
             <input id="user" type="email" className="input_login" placeholder="E-mail"/>
           </div>
           <div className="input_username_register">
@@ -33,7 +32,6 @@ export function Register() {
 <div className="p_log_in">
     <Link to={"/login"}><u>I have an account</u></Link>
 </div>
-      </div>
     </div>
   );
 }

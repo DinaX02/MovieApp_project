@@ -7,7 +7,7 @@ export function LogIn() {
   return (
     <div className="div_center_login background_Login">
        <Link to={"/"}> <Logo className={"logo"} /></Link>
-          <div className="input_username">
+          <div className="input">
             <input id="user" type="text" className="input_login" placeholder="Username"/>
           </div>
           <div>
