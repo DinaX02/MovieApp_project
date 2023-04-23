@@ -12,6 +12,7 @@ body {
   */
   color: white;
   font-family: 'Space Grotesk', sans-serif;
+  background-repeat: no-repeat;
 }
 
 /* navbar */
