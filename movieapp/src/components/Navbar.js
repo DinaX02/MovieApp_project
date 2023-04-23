@@ -19,7 +19,7 @@ export function Nav() {
           <input className="input_search" type="text" placeholder="Search..." />
           <div className="search"></div>
         </div>*/}
-        <Link to={"/register"}>
+        <Link to={"/login"}>
           <button className="btn_register_nav">Sign In</button>
         </Link>
       </div>
