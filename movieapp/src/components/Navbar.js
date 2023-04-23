@@ -8,7 +8,10 @@ export function Nav () {
             <Logo className={'logo'}/>
             <h6 className={'selected'}>Movies</h6>
             <h6>TV Shows</h6>
+            <div className='login_register'>
             <Link to={"/login"}><h6>Log In</h6></Link>
+            <Link to={"/register"}><button className='btn_register_nav'>Register</button></Link>
+            </div>
         </div>
     );
 }

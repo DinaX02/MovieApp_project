@@ -10,6 +10,26 @@ body {
 
 /* navbar */
 
+.login_register{
+  display: flex;
+}
+
+.btn_register_nav{
+  background-color: #480202;
+  color: white;
+  height: 40px;
+  border-radius: 20px;
+  padding: 1em;
+  margin: auto;
+  text-align: center;
+  font-size: 0.67em;
+    margin-block-start: 2.33em;
+    margin-block-end: 2.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
 .logo{
   width: 10vw;
   margin-left: 2vw;
