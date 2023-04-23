@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 export function LogIn() {
   return (
     <div className="div_center_login background_Login">
-      <div className="div_center_login">
        <Link to={"/"}> <Logo className={"logo"} /></Link>
           <div className="input_username">
             <input id="user" type="text" className="input_login" placeholder="Username"/>
@@ -29,7 +28,6 @@ export function LogIn() {
 <div className="p_log_in">
  <Link to={"/register"}> <u>I don't have an account</u></Link>  
 </div>
-      </div>
     </div>
   );
 }
