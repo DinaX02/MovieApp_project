@@ -21,7 +21,7 @@ export function Nav() {
           <div className="search"></div>
         </div>
         </div>
-        <Link to={"/register"}>
+        <Link to={"/login"}>
           <button className="btn_register_nav">Sign In</button>
         </Link>
       </div>
