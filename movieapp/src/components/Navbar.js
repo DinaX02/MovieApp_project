@@ -15,10 +15,12 @@ export function Nav() {
         </div>
 
       <div className="navRight">
-          {/*<div className="container">
+        <div className="space_search_bar">
+         <div className="container">
           <input className="input_search" type="text" placeholder="Search..." />
           <div className="search"></div>
-        </div>*/}
+        </div>
+        </div>
         <Link to={"/register"}>
           <button className="btn_register_nav">Sign In</button>
         </Link>
