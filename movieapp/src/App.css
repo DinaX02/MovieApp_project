@@ -11,7 +11,7 @@ body {
   flex-direction: column;
   */
   color: white;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Space Grotesk', sans-serif !important;
 }
 
 /* navbar */
