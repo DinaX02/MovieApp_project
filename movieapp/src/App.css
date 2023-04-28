@@ -15,6 +15,153 @@ body {
 }
 
 /* navbar */
+
+.Navbar {
+  height: 90px;
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  max-width: 65px;
+  margin-left: 1em;
+  margin-right: 1em;
+
+}
+
+.nav-logo {
+  display: flex;
+}
+
+.Navbar > .nav-logo {
+  font-weight: 700;
+  font-size: 21px;
+  margin: 15px;
+  color: #fff;
+}
+
+.Navbar > .nav-items > a {
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  margin: 15px;
+  position: relative;
+  opacity: 0.9;
+}
+
+.Navbar > .nav-items > a:hover{
+  opacity: 1;
+}
+
+.Navbar > .nav-items > a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: all .45s;
+}
+
+.ola {
+  margin-right: 2em;
+}
+
+.Navbar > .nav-items > a:hover::before {
+  width: 100%;
+
+}
+
+.Navbar > .nav-toggle{
+  display: none;
+
+}
+
+@media (max-width: 700px){
+
+  .Navbar > .nav-items{
+      position: absolute;
+      top: 90px;
+      display: flex;
+      flex-direction: column;
+      left: 0;
+      width: 100%;
+      /*text-align: right; para --> menu direita*/
+      height: 100%;
+      transform: translateX(-100%);
+      transition: all .45s;
+      
+  }
+
+  .Navbar > .nav-items > a::before {
+      background: transparent;
+
+  }
+
+  .Navbar > .nav-items.open{
+      transform: translateX(0);
+  }
+
+  .Navbar > .nav-toggle{
+      display: flex;
+      width: 50px;
+      height: 50px;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      margin-right: 0.4em
+  }
+
+  .nav-toggle > .bar{
+      position: relative;
+      width: 32px;
+      height: 2px;
+      background: #fff;
+  }
+
+  .nav-toggle > .bar::before , .nav-toggle > .bar::after{
+      content: "";
+      position: absolute;
+      height: 2px;
+      background: #fff;
+      border-radius: 2px;
+      transition: all .45s ease-in-out;
+  }
+
+  .btn_sign_out_border{
+      text-decoration: none !important;
+      background-color: whitesmoke;
+      border-radius: 50%;
+  }
+  .nav-toggle > .bar::before{
+      width: 25px;
+      transform: translateY(-8px);
+      right: 0;
+  }
+
+  .nav-toggle > .bar::after{
+      width: 32px;
+      transform: translateY(8px);
+      right: 0;
+  }
+
+  .nav-toggle.open > .bar {
+      transform: translateX(-40px);
+      background: transparent;
+  }
+
+  .nav-toggle.open > .bar::before {
+      width: 32px;
+      transform: rotate(45deg) translate(26px, -26px);
+  }
+
+  .nav-toggle.open > .bar::after {
+      transform: rotate(-45deg) translate(26px, 26px);
+  }
+}
 .navbar{
   height: 100px;
   display: flex;
@@ -39,6 +186,7 @@ body {
 
 .navbar .navLinks{
   display: flex;
+  flex-direction: row !important;
 }
 .navbar h6{
   margin-right: 20px;
@@ -275,4 +423,105 @@ a{
     background-repeat: no-repeat;
   }
   
+}
+
+
+@media (max-width: 768px) {
+
+  .poster_filme{
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .info_about{
+margin: 3em;
+  }
+
+  .btn_genres{
+margin-bottom: 1em;
+  }
+
+  .overview_text {
+    margin-right: 0 !important;
+}
+
+}
+
+/* details_page */
+
+.poster{
+  border-radius: 15PX;
+  max-width: 300px;
+  height: auto;
+}
+
+.img_poster{
+
+max-width: 350px !important;
+  margin-left: 1.5em;
+  margin-top: 2.8em;
+}
+
+.btn_add_watchlist{
+  margin-top: 3em;
+  width: 300px !important;
+  height: 45px !important;
+  background-color: transparent !important;
+  border: 3px solid  white !important;
+  border-radius: 25px;
+  color: white !important;
+}
+.info_about{
+  margin-top: 1.1em;
+   /* margin-left: 3em;*/
+}
+
+.poster_filme{
+  display: flex;
+  flex-direction: row;
+  /*
+  background-image: url('./assets/landscape_test_st.jpg');
+  height: auto;
+  max-width: var(--maxPrimaryPageWidth);
+  max-height: var(--maxPrimaryPageHeight);
+  background-size: cover;
+  background-repeat: round;*/
+}
+/*
+.genres_filmes{
+  display: flex;
+  flex-direction: row !important;
+}*/
+
+.cast_img{
+width: 100px;
+height: 150px;
+border-radius: 10px;
+}
+
+.div_general_cast{
+  display: flex;
+  flex-direction: row;
+}
+
+.name_and_photo_cast{
+  margin-right: 1.8em;
+  text-align: center;
+}
+.name_cast{
+font-size: 11px;
+}
+
+.btn_genres{
+  border-radius: 20px;
+  border: none;
+  padding: 0.8em;
+  margin-right: 1em;
+}
+
+.overview_text{
+margin-right: 3em;
+max-width:80%;
 }
