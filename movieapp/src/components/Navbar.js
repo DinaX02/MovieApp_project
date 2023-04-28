@@ -13,6 +13,7 @@ const Navbar = ()=> {
             <div className={`nav-items ${isOpen && "open"}`}>
                 <Link to={"/"}>Movies </Link>
                 <Link to={"/"}>Tv Shows</Link>
+                <Link to={"/watchlist"}>Your Watchlist</Link>
                  <div className="space_search_bar">
         </div>
             </div>
