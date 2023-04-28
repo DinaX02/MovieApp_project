@@ -3,7 +3,9 @@ import './App.css';
 import  {Homepage}  from "./pages/Homepage.js";
 import { LoginPage } from "./pages/LoginPage.js";
 import { RegisterPage } from "./pages/RegisterPage.js";
-import { Details } from "./pages/Details";
+import { DetailPAGE } from "./pages/DetailPage";
+import { Watchlist } from "./components/Watchlist";
+import { WatchlistPage } from "./pages/WatchlistPage";
 function App() {
   return (
     <div className="App">
@@ -12,7 +14,8 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
-          <Route path="/details" element={<Details />} />
+          <Route path="/details" element={<DetailPAGE />} />
+          <Route path="/watchlist" element={<WatchlistPage />} />
         </Routes>
       </BrowserRouter>
         

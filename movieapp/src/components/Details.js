@@ -1,18 +1,22 @@
+import { Link } from "react-router-dom";
 import "../App.css";
-import Navbar from "../components/Navbar";
+import Navbar from "./Navbar";
 
 export function Details() {
   return (
     <div className="homepage">
       <Navbar />
 
+<div className="geral_content_detail">
       <div className="poster_filme">
         <div className="img_poster">
           <img
             className="poster"
             src={require("../assets/Stranger_Things_Temporada_1_Poster.jpg")}
           />
-          <button className="btn_add_watchlist">Add to Whatchist</button>
+          <div className="btn_add">
+         <Link to={"/watchlist"}><button className="btn_add_watchlist">Add to Whatchist</button></Link> 
+          </div>
         </div>
 
         <div className="info_about">
@@ -23,14 +27,14 @@ export function Details() {
             <button className="btn_genres">Mystery</button>
           </div>
 
-          <h3>Overview</h3>
+          <h3 className="space_top">Overview</h3>
           <p className="overview_text">
             When a young boy vanishes, a small town uncovers a mystery involving
             secret experiments, terrifying supernatural forces, and one strange
             little girl.
           </p>
 
-          <h3>Cast</h3>
+          <h3 className="space_top">Cast</h3>
 
           <div className="div_general_cast">
             <div className="name_and_photo_cast">
@@ -59,6 +63,7 @@ export function Details() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );
