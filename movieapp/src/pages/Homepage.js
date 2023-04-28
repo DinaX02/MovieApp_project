@@ -7,6 +7,7 @@ export function Homepage() {
     return (
       <div className="homepage">
       <Navbar/>
+      <Selector/>
       <Home/>
       </div>
     );
