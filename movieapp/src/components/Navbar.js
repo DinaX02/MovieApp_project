@@ -1,3 +1,44 @@
+import React, { useState } from "react";
+import { ReactComponent as Logo } from "../assets/logo.svg";
+import { Link } from "react-router-dom";
+import "../App.css";
+const Navbar = ()=> {
+
+    const [isOpen, setIsOpen] = useState(false);
+    return(
+        <div className="Navbar">
+            <span className="nav-logo">
+           <Link to={"/"}><Logo className={"logo"} /></Link> 
+            </span>
+            <div className={`nav-items ${isOpen && "open"}`}>
+                <Link to={"/"}>Movies </Link>
+                <Link to={"/"}>Tv Shows</Link>
+                 <div className="space_search_bar">
+        </div>
+            </div>
+            <div className={`nav-toggle ${isOpen && "open"}`} onClick={() => setIsOpen(!isOpen)}>
+                <div className="bar"></div>
+            </div>
+        </div>
+    )
+}
+
+export default Navbar
+
+
+
+
+
+
+
+
+
+
+
+
+
+  {/*
+
 import "../App.css";
 import React from "react";
 import { ReactComponent as Logo } from "../assets/logo.svg";
@@ -9,7 +50,7 @@ export function Nav() {
             <Logo className={"logo"} />
             <div className={"navLinks"}>
                 <h6 className={"selected"}>Movies</h6>
-                <h6>TV Shows</h6>
+                <Link to={"/details"}><h6>TV Shows</h6></Link>
             </div>
 
         </div>
@@ -21,10 +62,13 @@ export function Nav() {
           <div className="search"></div>
         </div>
         </div>
+      
         <Link to={"/login"}>
           <button className="btn_register_nav">Sign In</button>
         </Link>
+
       </div>
     </div>
   );
 }
+  */}
