@@ -10,6 +10,8 @@ body {
   display: flex;
   flex-direction: column;
   */
+  background-repeat: no-repeat;
+  background-size: cover;
   color: white;
   font-family: 'Space Grotesk', sans-serif !important;
 }
@@ -264,6 +266,12 @@ a{
   color: white;
   text-decoration: none;
 }
+
+
+/* homepage */
+
+
+
 
 
 
