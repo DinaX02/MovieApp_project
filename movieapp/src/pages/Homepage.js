@@ -1,9 +1,11 @@
 import '../App.css';
-import Navbar from '../components/Navbar'
+import {Nav} from '../components/Navbar'
+import {Home} from '../components/Home'
 export function Homepage() {
     return (
       <div className="homepage">
-      <Navbar/>
+      <Nav/>
+      <Home/>
       </div>
     );
   }
