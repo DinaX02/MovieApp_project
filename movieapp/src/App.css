@@ -381,7 +381,8 @@ a{
   overflow-x: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none; 
-  padding-right: 40vw;
+  padding-right: 20px;
+  margin-right: 50px;
   cursor: grab;
   padding-bottom: 0.2em;
   padding-top: 0.2em;
@@ -409,6 +410,21 @@ a{
   cursor: pointer;
   margin-left: 2.5em;
   margin-top: 1em;
+}
+
+.showmore{
+  color: #fff !important;
+  border: #fff solid 2px !important;
+  background-color: #480202;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 20px;
+  min-width: 25em;
+  height: 2em;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 3em;
 }
 /* media querrys */
 
