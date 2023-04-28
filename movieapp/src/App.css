@@ -6,10 +6,6 @@
 body {
   background-image: linear-gradient(#0C0909, #480202);
   min-height: 100vh;
-  /*
-  display: flex;
-  flex-direction: column;
-  */
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
@@ -482,6 +478,10 @@ margin-bottom: 1em;
       
   }
 
+  .Navbar > .nav-items > a{
+    margin-left: 36px;
+  }
+
   .Navbar > .nav-items > a::before {
       background: transparent;
 
@@ -535,17 +535,16 @@ margin-bottom: 1em;
   }
 
   .nav-toggle.open > .bar {
-      transform: translateX(-40px);
       background: transparent;
   }
 
   .nav-toggle.open > .bar::before {
       width: 32px;
-      transform: rotate(45deg) translate(26px, -26px);
+      transform: rotate(45deg);
   }
 
   .nav-toggle.open > .bar::after {
-      transform: rotate(-45deg) translate(26px, 26px);
+      transform: rotate(-45deg);
   }
 }
 
