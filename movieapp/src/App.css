@@ -259,10 +259,254 @@ overflow: hidden !important;
     }
 
 
+/* /////////////////////watchlist /////////////////////*/
+    .space_title{
+      margin-left: 36px;
+      margin-top: 1em;
+    }
+
+.header_watchlist{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+
+.input-searchWlist{
+    display: flex;
+  margin-top: 2em;
+}
+
+.search_in_Watchlist{
+  height: 45px;
+  background-color: #120909;
+  border: 3px solid #891A1A;
+  border-radius: 25px;
+  padding-left: 1em;
+  color: white;
+  width: 500px;
+}
 
 
+.line{
+margin-top: -0.5em;
+  border-bottom: solid 2px rgb(253, 190, 190);
+  width: 96.5%;
+}
+
+.movie-grid {
+  display: grid;
+  margin-left: 36px;
+  margin-top: 2em;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+@media (min-width: 992px) {
+  .movie-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.space_end{
+  margin-right: 2em;
+  margin-left: 1em;
+}
+
+.card_movie{
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin-top: 3em;
+  margin-left: 36px;
+}
+/*
+.movie-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}*/
+
+.movie-card:hover .overlay {
+  border: 3px solid var(--secondary);
+}
+
+.movie-card .inner-card-controls {
+  display: inline;
+  background-color: red;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  padding: 3px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.movie-card:hover .inner-card-controls {
+  opacity: 1;
+}
+
+.total{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1em;
+}
+.total_films {
+  text-align: left;
+  color: #480202;
+  background-color: white;
+  font-weight: 300;
+  border-radius: 500px;
+  padding: 1em;
+}
+.ctrl-btn {
+  color: #fefefe;
+  background-color: transparent;
+  border: none;
+  transition: all 0.3s ease;
+  font-size: 1.25rem;
+  padding: 5px;
+  margin: 0;
+}
+
+.ctrl-btn:hover {
+  color: var(--secondary);
+  cursor: pointer;
+}
+
+.no-movies{
+  margin-top: 3em;
+  margin-left: 36px;
+}
+
+.year_title_director{
+  background-color: white;
+  border-radius:0px 0px  15px 15px ;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  padding-top: 0.5rem;
+  color: #151515;
+}
+
+div.flex-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div.director-name, .year_film, .card-attribute {
+  display: flex;
+  align-items: center;
+  /*padding: 1em 0; */
+}
 
 
+.img_card{
+  border-radius:15px 15px 0px 0px  ;
+  max-width: 300px;
+  height: auto;
+  margin-bottom: -1em;
+}
+
+/* Add Page */
+.add-content {
+  margin-top: 3em;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.search_spacee{
+  margin-left: 36px;
+  position: relative;
+  width: 500px;
+  height: 100px;
+}
+
+.add-content .input-wrapper input {
+  width: 100%;
+  background-color: var(--primary);
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  color: var(--white);
+  font-size: 1.25rem;
+}
+
+.results {
+  padding: 0;
+  margin: 0;
+  margin-top: 20px;
+}
+
+.results li {
+  list-style: none;
+}
+
+.card_watchlist_poster{
+  border-radius: 10px;
+}
+.result-card {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.result-card .poster-wrapper img,
+.filler-poster {
+  width: 75px;
+  height: 113px;
+  background-color: #dbdada;
+  border-radius: 5px;
+  margin-right: 15px;
+  display: block;
+  color: transparent;
+}
+
+.result-card .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.result-card .info .title {
+  font-size: 1.25rem;
+  color: var(--primary);
+  font-weight: 600;
+  margin: 0;
+}
+
+.result-card .info .release-date {
+  margin-top: 1em;
+  font-size: 1rem;
+  font-weight: lighter;
+  color: var(--primary);
+}
+
+.result-card .controls button {
+  margin-right: 10px;
+}
+
+.controls{
+  display: flex;
+  flex-direction: row;
+}
+
+.btnADD_filme{
+  background-color: white;
+  color: #891A1A;
+  border-radius: 5px;
+  padding: 1em;
+  outline: none;
+}
 
 /* /////////////////////login e register /////////////////////*/
 
@@ -361,6 +605,7 @@ a{
 }
 
 .header{
+  width: 200px;
   font-size: 20px;
   margin-bottom: -12px;
   margin-left: 10px;
