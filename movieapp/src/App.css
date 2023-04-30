@@ -288,6 +288,10 @@ overflow: hidden !important;
   width: 500px;
 }
 
+.search_in_Watchlist:focus{
+    outline: none;
+    border: 3px solid red;
+}
 
 .line{
 margin-top: -0.5em;
