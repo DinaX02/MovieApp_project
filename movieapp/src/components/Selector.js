@@ -27,7 +27,6 @@ export function Selector() {
 <button className={'sel'}>Horror</button>
 <button className={'sel'}>Horror</button>
 
-
       </div>
     );
   }

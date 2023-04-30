@@ -16,6 +16,10 @@ export function Home() {
         <div className='card'><p  className={'cate'}>Action, Sci-fi</p><h4 className={'header'}>The Mandalorian</h4></div>
         <div className='card'><p  className={'cate'}>Action, Sci-fi</p><h4 className={'header'}>The Mandalorian</h4></div>
         <div className='card'><p  className={'cate'}>Action, Sci-fi</p><h4 className={'header'}>The Mandalorian</h4></div>
+
+        <br></br>
+        <button className={'showmore'}>Show More</button>
+
       </div>
     );
   }
