@@ -4,12 +4,16 @@ import { GlobalContext } from "../context/GlobalState";
 import { Add } from "./Add";
 import { MovieCard } from "./MovieCard";
 import { Watched } from "./Watched";
-
+import { Link } from "react-router-dom";
 export function Watchlist() {
   const {watchlist} = useContext(GlobalContext);
 
   return (
     <div>
+      <Link to={"/watchlist"}><button className={'clicked sel'}>Whatlist</button></Link>
+      <Link to={"/watchedlist"} ><button className={'sel'}>Watched</button></Link>
+      <Link to={"/addToWatchlist"}><button className={'sel'}>+ Add</button></Link>
+
       <div className="header_watchlist">
         <h1 className="space_title">Watchlist</h1>
         <h4 className="space_end">Need to Watch ASAP</h4>

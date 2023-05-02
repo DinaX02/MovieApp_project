@@ -1,7 +1,7 @@
 import "../App.css";
 import React, { useState } from "react";
 import { ResultCard } from "./ResultCard";
-
+import { Link } from "react-router-dom";
 export const Add = () => {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
@@ -26,7 +26,9 @@ export const Add = () => {
 
   return (
     <div className="add-page">
-
+    <Link to={"/watchlist"}><button className={'sel'}>Whatlist</button></Link>
+      <Link to={"/watchedlist"} ><button className={'sel'}>Watched</button></Link>
+      <Link to={"/addToWatchlist"}><button className={'clicked sel'}>+ Add</button></Link>
   <div className="header_watchlist">
         <h1 className="space_title">Add to Watchlist</h1>
         <h4 className="space_end">Add all your favorite Movies</h4>
@@ -45,7 +47,7 @@ export const Add = () => {
           </div>
 
           {results.length > 0 && (
-            <ul className="results">
+            <ul className="results" id="style-13">
               {results.map((movie) => (
                 <li key={movie.id}>
                     <ResultCard movie={movie}/>

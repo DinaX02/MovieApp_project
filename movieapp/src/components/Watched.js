@@ -2,6 +2,7 @@ import "../App.css";
 import React, {useContext} from "react";
 import { GlobalContext } from "../context/GlobalState";
 import { MovieCard } from "./MovieCard";
+import { Link } from "react-router-dom";
 
 export function Watched({movie, type}) {
 
@@ -9,6 +10,9 @@ const {watched} =useContext(GlobalContext);
 
   return (
     <div>
+        <Link to={"/watchlist"}><button className={'sel'}>Whatlist</button></Link>
+      <Link to={"/watchedlist"} ><button className={'clicked sel'}>Watched</button></Link>
+      <Link to={"/addToWatchlist"}><button className={'sel'}>+ Add</button></Link>
 
 <div className="header_watchlist">
         <h1 className="space_title">Watched List</h1>

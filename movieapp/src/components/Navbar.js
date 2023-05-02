@@ -14,8 +14,6 @@ const Navbar = ()=> {
                 <Link to={"/"}>Movies </Link>
                 <Link to={"/"}>Tv Shows</Link>
                 <Link to={"/watchlist"}>Your Watchlist</Link>
-                <Link to={"/watchedlist"}>Watched</Link>
-                <Link to={"/addToWatchlist"}>+ Add</Link>
                  <div className="space_search_bar">
         </div>
             </div>
