@@ -16,18 +16,21 @@ export function Watchlist() {
       </div>
       <hr className="line" />
       
+
+
+{watchlist.length > 0 ?(
+<div>
 <div className="total">
       <span className="total_films">
        {watchlist.length} {Watched.length === 1 ? "Movie" : "Movies"}
       </span></div>
-
-{watchlist.length > 0 ?(
 
 <div className="movie-grid">
   {watchlist.map((movie) => (
     <MovieCard movie={movie} type="watchlist"/>
 
   ))}
+</div>
 </div>
 ) : (
   <h2 className="no-movies">No Movies in your List, add some :)</h2>
