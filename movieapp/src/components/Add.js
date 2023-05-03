@@ -12,12 +12,13 @@ export const Add = () => {
     setQuery(e.target.value);
 
     fetch(
-      `https://api.themoviedb.org/3/search/movie?api_key=723206ae2e0c5c92763af7ff78b43766&language=en-US&page=1&include_adult=false&query=${e.target.value})`
+      `https://api.themoviedb.org/3/search/multi?api_key=723206ae2e0c5c92763af7ff78b43766&language=en-US&page=1&include_adult=false&query=${e.target.value}&fuzzy=1)`
     )
       .then((res) => res.json())
       .then((data) => {
         if (!data.errors) {
           setResults(data.results);
+          console.log(data);
         } else {
           setResults([]);
         }

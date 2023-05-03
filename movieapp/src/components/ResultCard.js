@@ -36,12 +36,10 @@ export const ResultCard = ({ movie }) => {
 
       <div className="info">
         <div className="header">
-          <h3 className="title">{movie.title}</h3>
+          <h3 className="title">{movie.name ? movie.name : "" + movie.title ? movie.title : ""}</h3>
           <h4 className="release-date">
 
-{movie.release_date.substring(0, 4)} {/* mostrar apenas o ano */}
-{/*{movie.release_date ? movie.release_date.substring(0, 4) : "-"}{" "}
- se nao houver release date */}
+{movie.release_date ? movie.release_date.substring(0, 4) : "-" + movie.first_air_date ? movie.first_air_date : "-"}
           </h4>
         </div>
 

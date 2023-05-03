@@ -915,6 +915,7 @@ width: 200px;
 
 .poster{
   border-radius: 15PX;
+  max-width: 80vw;
   width: 350px;
   height: auto;
 }
@@ -980,6 +981,7 @@ border-radius: 10px;
 .div_general_cast{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .name_and_photo_cast{
