@@ -12,7 +12,7 @@ export function MovieControls({ movie, type }) {
       {type === "watchlist" && (
         <>
           <button className="ctrl-btn" onClick={() => addMovieToWatched(movie)}>
-            <i className="fa-fw far fa-eye"></i>
+             {/*<i className="fa-fw far fa-eye"></i>*/}
             visto
           </button>
 

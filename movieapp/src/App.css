@@ -338,7 +338,6 @@ body {
 
 .movie-card .inner-card-controls {
   display: inline;
-  background-color: red;
   position: absolute;
   bottom: 20px;
   left: 50%;
@@ -359,6 +358,7 @@ body {
   justify-content: flex-end;
   margin-right: 1em;
 }
+
 .total_films {
   text-align: left;
   color: #480202;
@@ -778,13 +778,68 @@ a {
   }
 }
 
+@media (max-width: 360px) {
+
+  .controls {
+    max-width: 163px !important;
+}
+
+  .search_in_Watchlist {
+      width: 253px !important;
+  }
+
+  .space_title {
+    margin-left: 19px;
+}
+
+.space_end {
+  margin-left: 1.2em !important;
+}
+
+.logo {
+  margin-left: 0.2em;
+}
+
+.result-card .info .title {
+    width: 134px !important;
+}
+
+.result-card .info .title {
+    font-size: 1rem;
+}
+
+
+}
+
+
+@media (max-width: 470px) {
+  .results {
+    max-height: 250px !important;
+  }
+}
+
+
+
 @media (max-width: 550px) {
+
+
+  .total{
+    margin-right: 0;
+  }
   .results {
     max-height: 306px;
   }
 
   .result-card .controls button {
     padding: 0;
+  }
+
+  .result-card .controls button:hover {
+    border: 2px solid red;
+    background-color: #f05858;
+    color: white;
+    padding: 0em;
+    margin-right: 10px;
   }
 
   .result-card .info .title {
