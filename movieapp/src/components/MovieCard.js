@@ -6,6 +6,7 @@ import { MovieControls } from "./MovieControls";
 export function MovieCard({ movie, type }) {
   return (
     <div className="movie-card">
+      
       <div className="overlay"></div>
 
       <img
