@@ -977,6 +977,7 @@ a {
 .div_general_cast {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .name_and_photo_cast {

@@ -1,26 +1,48 @@
 import { Link } from "react-router-dom";
 import "../App.css";
 import Navbar from "./Navbar";
+import { useEffect, useState } from "react";
 
 export function Details() {
-  return (
-    <div className="homepage">
-      <Navbar />
+    const [results, setResults] = useState({});
 
-<div className="geral_content_detail">
-      <div className="poster_filme">
-        <div className="img_poster">
-          <img
-            className="poster"
-            src={require("../assets/Stranger_Things_Temporada_1_Poster.jpg")}
-          />
-          <div className="btn_add">
-         <Link to={"/watchlist"}><button className="btn_add_watchlist">Add to Whatchist</button></Link> 
-          </div>
-        </div>
+    useEffect(() => {
+        fetch(
+            `https://api.themoviedb.org/3/tv/66732?api_key=723206ae2e0c5c92763af7ff78b43766&language=en-US`
+        )
+            .then((res) => res.json())
+            .then((data) => {
+                if (!data.errors) {
+                    setResults(data);
+                    console.log(data);
+                } else {
+                    setResults({});
+                }
+            });
+    }, []);
 
-        <div className="info_about">
-          <h1>Stranger Things</h1>
+    return (
+        <div className="homepage">
+            <Navbar />
+
+            <div className="geral_content_detail">
+                <div className="poster_filme">
+                    <div className="img_poster">
+                        <img
+                            className="poster"
+                            src={`https://image.tmdb.org/t/p/w500////${results.poster_path}`}
+                        />
+                        <div className="btn_add">
+                            <Link to={"/watchlist"}>
+                                <button className="btn_add_watchlist">
+                                    Add to Whatchist
+                                </button>
+                            </Link>
+                        </div>
+                    </div>
+
+                    <div className="info_about">
+                        <h1>{results.name}</h1>
           <div className="genres_filmes">
             <button className="btn_genres">Drama</button>
             <button className="btn_genres">Sci-Fi & Fantasy</button>
