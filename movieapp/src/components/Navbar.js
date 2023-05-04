@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ReactComponent as Logo } from "../assets/logo.svg";
 import { Link } from "react-router-dom";
 import "../App.css";
+
 const Navbar = ()=> {
 
     const [isOpen, setIsOpen] = useState(false);

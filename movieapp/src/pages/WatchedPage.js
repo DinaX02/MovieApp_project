@@ -1,13 +1,14 @@
 import "../App.css";
 import React from "react";
-import { Watchlist } from "../components/Watchlist";
+import { Watched } from "../components/Watched";
 import Navbar from "../components/Navbar";
 
-export function WatchlistPage(){
+
+export function WatchedPage(){
     return(
         <div>
         <Navbar/>
-        <Watchlist/>
+        <Watched/>
         </div>
     )
 }
