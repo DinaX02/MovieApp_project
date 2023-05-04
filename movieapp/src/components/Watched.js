@@ -10,7 +10,7 @@ const {watched} =useContext(GlobalContext);
 
   return (
     <div>
-        <Link to={"/watchlist"}><button className={'sele'}>Whatlist</button></Link>
+        <Link to={"/watchlist"}><button className={'sele'}>Watchlist</button></Link>
       <Link to={"/watchedlist"} ><button className={'clicked sele'}>Watched</button></Link>
       <Link to={"/addToWatchlist"}><button className={'sele'}>+ Add</button></Link>
 
