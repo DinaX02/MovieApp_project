@@ -49,11 +49,11 @@ export function Details() {
             <button className="btn_genres">Mystery</button>
           </div>
 
+          <h3 className="space_top">Number of Seasons:  <span>{results.number_of_seasons}</span></h3>
+          <h3 className="space_top">Total:  <span>{results.number_of_episodes}</span></h3>
           <h3 className="space_top">Overview</h3>
           <p className="overview_text">
-            When a young boy vanishes, a small town uncovers a mystery involving
-            secret experiments, terrifying supernatural forces, and one strange
-            little girl.
+          {results.overview} 
           </p>
 
           <h3 className="space_top">Cast</h3>

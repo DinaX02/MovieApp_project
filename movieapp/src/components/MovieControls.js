@@ -14,7 +14,7 @@ export function MovieControls({ movie, type }) {
       {/* put and take out of watchlist*/}
       {type === "watchlist" && (
         <>
-
+           
           <button className="ctrl-btn" onClick={() => addMovieToWatched(movie)}>
           <FontAwesomeIcon icon={faEye} size="lg" style={{color: "#ffffff"}} />
           </button>
