@@ -13,8 +13,8 @@ export function MovieCard({ movie, type }) {
         alt={`${movie.title} Poster`}
       />
 
-      <MovieControls type={type} movie={movie} />
-      
+      {/*<MovieControls type={type} movie={movie} /> */}
+
     </div>
   );
 }

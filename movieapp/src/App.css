@@ -824,6 +824,8 @@ a {
     margin-right: 0;
   }
   .results {
+    overflow-x: hidden !important;
+    margin-right: 1em;
     max-height: 306px;
   }
 
