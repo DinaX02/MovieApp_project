@@ -23,7 +23,7 @@ export function MovieControls({ movie, type }) {
             className="ctrl-btn"
             onClick={() => removeMovieFromWatchlist(movie.id)}
           >
-           <FontAwesomeIcon icon={faXmark} size="lg" beatFade style={{color: "#ffffff"}}/>  
+           <FontAwesomeIcon icon={faXmark} size="lg" style={{color: "#ffffff"}}/>  
           </button>
 
         </>
@@ -40,7 +40,7 @@ export function MovieControls({ movie, type }) {
             className="ctrl-btn"
             onClick={() => removeFromWatched(movie.id)}
           >
-         <FontAwesomeIcon icon={faXmark} size="lg" beatFade style={{color: "#ffffff"}}/>  
+         <FontAwesomeIcon icon={faXmark} size="lg" style={{color: "#ffffff"}}/>  
           </button>
         </>
       )}

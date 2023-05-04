@@ -50,7 +50,7 @@ export function Details() {
           </div>
 
           <h3 className="space_top">Number of Seasons:  <span>{results.number_of_seasons}</span></h3>
-          <h3 className="space_top">Total:  <span>{results.number_of_episodes}</span></h3>
+          <h3 className="space_top">Total episodes:  <span>{results.number_of_episodes}</span></h3>
           <h3 className="space_top">Overview</h3>
           <p className="overview_text">
           {results.overview} 
