@@ -1,6 +1,9 @@
 import "../App.css";
 import React, { useContext } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faXmark,faEyeSlash,faEye} from '@fortawesome/free-solid-svg-icons'
 import { GlobalContext } from "../context/GlobalState";
+
 
 export function MovieControls({ movie, type }) {
   const { removeMovieFromWatchlist, addMovieToWatched, removeFromWatched, moveToWatchlist } =
@@ -11,18 +14,18 @@ export function MovieControls({ movie, type }) {
       {/* put and take out of watchlist*/}
       {type === "watchlist" && (
         <>
+
           <button className="ctrl-btn" onClick={() => addMovieToWatched(movie)}>
-             {/*<i className="fa-fw far fa-eye"></i>*/}
-            visto
+          <FontAwesomeIcon icon={faEye} size="lg" style={{color: "#ffffff"}} />
           </button>
 
           <button
             className="ctrl-btn"
             onClick={() => removeMovieFromWatchlist(movie.id)}
           >
-            {/*<i className="fa-fw fa fa-times"></i>*/}
-            tirar
+           <FontAwesomeIcon icon={faXmark} size="lg" beatFade style={{color: "#ffffff"}}/>  
           </button>
+
         </>
       )}
 
@@ -30,16 +33,14 @@ export function MovieControls({ movie, type }) {
       {type === "watched" && (
         <>
           <button className="ctrl-btn" onClick={() =>moveToWatchlist(movie)}>
-            {/*<i className="fa-fw fa-eye-slash"></i>*/}
-            back to watchlist
+          <FontAwesomeIcon icon={faEyeSlash} size="lg" style={{color: "#ffffff"}} />
           </button>
 
           <button
             className="ctrl-btn"
             onClick={() => removeFromWatched(movie.id)}
           >
-            {/*<i className="fa-fw fa fa-times"></i>*/}
-            tirar
+         <FontAwesomeIcon icon={faXmark} size="lg" beatFade style={{color: "#ffffff"}}/>  
           </button>
         </>
       )}

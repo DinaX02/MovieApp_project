@@ -28,9 +28,9 @@ export const Add = () => {
   return (
     <div className="add-page">
       <div className="sm-dv">
-    <Link to={"/watchlist"}><button className={'sele'}>Watchlist</button></Link>
-      <Link to={"/watchedlist"} ><button className={'sele'}>Watched</button></Link>
-      <Link to={"/addToWatchlist"}><button className={'clicked sele'}>+ Add</button></Link></div>
+    <Link to={"/watchlist"}><button className={'clicked sele'}>Watchlist</button></Link>
+      <Link to={"/watchedlist"} ><button className={'clicked sele'}>Watched</button></Link>
+      <Link to={"/addToWatchlist"}><button className={'sele'}>+ Add</button></Link></div>
   <div className="header_watchlist">
         <h1 className="space_title">Add to Watchlist</h1>
         <h4 className="space_end">Add all your favorite Movies</h4>
