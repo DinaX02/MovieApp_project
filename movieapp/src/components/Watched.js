@@ -3,6 +3,7 @@ import React, {useContext} from "react";
 import { GlobalContext } from "../context/GlobalState";
 import { MovieCard } from "./MovieCard";
 import { Link } from "react-router-dom";
+import {MovieControls} from "./MovieControls";
 
 export function Watched({movie, type}) {
 
@@ -24,7 +25,10 @@ const {watched} =useContext(GlobalContext);
 
 <div className="movie-grid">
   {watched.map((movie) => (
+      <div>
     <MovieCard movie={movie} type="watched"/>
+      <MovieControls movie={movie} type="watched"/>
+      </div>
 
   ))}
 </div>

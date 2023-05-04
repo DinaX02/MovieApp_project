@@ -5,8 +5,11 @@ import { Add } from "./Add";
 import { MovieCard } from "./MovieCard";
 import { Watched } from "./Watched";
 import { Link } from "react-router-dom";
+import { MovieControls } from "./MovieControls";
+
 export function Watchlist() {
   const {watchlist} = useContext(GlobalContext);
+  console.log(watchlist)
 
   return (
     <div>
@@ -31,7 +34,10 @@ export function Watchlist() {
 
 <div className="movie-grid">
   {watchlist.map((movie) => (
+      <div>
     <MovieCard movie={movie} type="watchlist"/>
+    <MovieControls movie={movie} type="watchlist"/>
+      </div>
 
   ))}
 </div>

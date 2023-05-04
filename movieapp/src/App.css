@@ -296,7 +296,6 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
   margin-left: 36px;
 
   margin-right: 36px;
@@ -423,13 +422,11 @@ div.director-name,
 .add-content {
   margin-top: 3em;
   max-width: 600px;
-  margin: 0 auto;
 }
 
 .search_spacee {
   margin-left: 36px;
   position: relative;
-  width: 500px;
   height: 100px;
 }
 
@@ -889,7 +886,7 @@ a {
     left: 0;
     width: 100%;
     /*text-align: right; para --> menu direita*/
-    height: 100%;
+    height: calc(100vh - 90px);
     transform: translateX(-100%);
     transition: all 0.45s;
     z-index: 5;
