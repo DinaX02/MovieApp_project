@@ -339,6 +339,12 @@ body {
  display: flex;
  justify-content: center;
  width: 200px !important;
+  height: 50px;
+  background-color: darkred;
+  margin-top: -69px;
+  margin-bottom: 2em;
+  border-radius: 0 0 15px 15px;
+  position: relative;
 }
 
 
@@ -369,7 +375,6 @@ body {
   transition: all 0.3s ease;
   font-size: 1.25rem;
   padding: 5px;
-  margin-top: -4.8em;
 }
 
 .ctrl-btn:hover {

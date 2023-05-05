@@ -19,7 +19,7 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
-          <Route path="/details" element={<DetailPAGE />} />
+          <Route path="/details/:movieType/:movieId" element={<DetailPAGE />} />
           <Route path="/watchlist" element={<WatchlistPage />} />
           <Route path="/addToWatchlist" element={<AddToWatchlist />} />
           <Route path="/watchedlist" element={<WatchedPage/>} />

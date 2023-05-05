@@ -1,22 +1,34 @@
 import { Link } from "react-router-dom";
+import defaultImage from "../assets/default_cast.jpg";
+import { useParams } from "react-router-dom";
 import "../App.css";
 import Navbar from "./Navbar";
 import { useEffect, useState } from "react";
 
 export function Details() {
     const [results, setResults] = useState({});
+    const [actors, setActors] = useState({});
+    const { movieId } = useParams();
+    const { movieType } = useParams();
 
     useEffect(() => {
-        fetch(
-            `https://api.themoviedb.org/3/tv/66732?api_key=723206ae2e0c5c92763af7ff78b43766&language=en-US`
-        )
-            .then((res) => res.json())
-            .then((data) => {
-                if (!data.errors) {
-                    setResults(data);
-                    console.log(data);
+        Promise.all([
+            fetch(`https://api.themoviedb.org/3/${movieType}/${movieId}?api_key=723206ae2e0c5c92763af7ff78b43766&language=en-US`),
+            fetch(`https://api.themoviedb.org/3/${movieType}/${movieId}/credits?api_key=723206ae2e0c5c92763af7ff78b43766&language=en-US`)
+        ])
+            .then(([res1, res2]) => Promise.all([res1.json(), res2.json()]))
+            .then(([data1, data2]) => {
+                if (!data1.errors) {
+                    setResults(data1);
+                    console.log(data1);
                 } else {
                     setResults({});
+                }
+                if (!data2.errors) {
+                    setActors(data2);
+                    console.log(data2);
+                } else {
+                    setActors({});
                 }
             });
     }, []);
@@ -42,7 +54,7 @@ export function Details() {
                     </div>
 
                     <div className="info_about">
-                        <h1>{results.name}</h1>
+                        <h1>{results.name}{results.title}</h1>
           <div className="genres_filmes">
             <button className="btn_genres">Drama</button>
             <button className="btn_genres">Sci-Fi & Fantasy</button>
@@ -53,36 +65,23 @@ export function Details() {
           <h3 className="space_top">Total episodes:  <span>{results.number_of_episodes}</span></h3>
           <h3 className="space_top">Overview</h3>
           <p className="overview_text">
-          {results.overview} 
+          {results.overview}
           </p>
 
           <h3 className="space_top">Cast</h3>
 
           <div className="div_general_cast">
-            <div className="name_and_photo_cast">
-            <img className="cast_img" src={require("../assets/cast1.jpg")} />
-            <p className="name_cast">Millie Boby Brown</p>
-            </div>
-            <div className="name_and_photo_cast">
-            <img className="cast_img" src={require("../assets/cast 3.jpg")} />
-            <p className="name_cast">Finn Wolfhard</p>
-            </div>
-            <div className="name_and_photo_cast">
-            <img className="cast_img" src={require("../assets/cast4.jpg")} />
-  <p className="name_cast">Noah Schnapp</p>
-            </div>
-            <div className="name_and_photo_cast">
-            <img className="cast_img" src={require("../assets/cast5.jpg")} />
-            <p className="name_cast">Caleb McLaughlin</p>
-            </div>
-            <div className="name_and_photo_cast">
-            <img className="cast_img" src={require("../assets/cast6.webp")} />
-            <p className="name_cast">Sadie Sink</p>
-            </div>
-            <div className="name_and_photo_cast">
-            <img className="cast_img" src={require("../assets/cast2.webp")} /> 
-             <p className="name_cast">David Harbour</p>
-            </div>
+              {actors.cast &&
+              actors.cast.map((cast) => (
+                  <div key={cast.id} className="name_and_photo_cast">
+                      {cast.profile_path ? (
+                          <img className="cast_img" src={`https://image.tmdb.org/t/p/w500////${cast.profile_path}`}/>
+                      ) : (
+                          <img className="cast_img" src={defaultImage}/>
+                      )}
+                      <p className="name_cast">{cast.name}</p>
+                  </div>
+              ))}
           </div>
         </div>
       </div>

@@ -35,10 +35,10 @@ export function Watchlist() {
 <div className="movie-grid">
   {watchlist.map((movie) => (
       <div>
-    <MovieCard movie={movie} type="watchlist"/>
-
-    <MovieControls movie={movie} type="watchlist"/>
-
+          <Link to={`/details/${movie.media_type}/${movie.id}`}>
+              <MovieCard movie={movie} type="watchlist"/>
+          </Link>
+          <MovieControls movie={movie} type="watchlist"/>
       </div>
 
   ))}

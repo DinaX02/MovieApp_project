@@ -26,8 +26,10 @@ const {watched} =useContext(GlobalContext);
 <div className="movie-grid">
   {watched.map((movie) => (
       <div>
-    <MovieCard movie={movie} type="watched"/>
-      <MovieControls movie={movie} type="watched"/>
+          <Link to={`/details/${movie.media_type}/${movie.id}`}>
+              <MovieCard movie={movie} type="watched"/>
+          </Link>
+          <MovieControls movie={movie} type="watched"/>
       </div>
 
   ))}
