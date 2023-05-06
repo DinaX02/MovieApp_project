@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 
 let page=0;
-export function Home() {
+export function Home_shows() {
   const [results,setResults] = useState({});
   const [count, setCount] = useState(1);
   const [previous, setPrevious] = useState("none");
@@ -13,7 +13,7 @@ export function Home() {
   useEffect(() => {
     console.log(`aqui vai ${count}`);
       fetch(
-          `https://api.themoviedb.org/3/movie/popular?api_key=723206ae2e0c5c92763af7ff78b43766&language=en-US&page=${count}`
+          `https://api.themoviedb.org/3/tv/popular?api_key=723206ae2e0c5c92763af7ff78b43766&language=en-US&page=${count}`
       )
           .then((res) => res.json())
           .then((data) => {
@@ -46,7 +46,7 @@ if( count > 1){
                 <div key={results.id} className="home">
 
                       {results.poster_path ? (
-                        <Link to={`/details/movie/${results.id}`}>
+                        <Link to={`/details/tv/${results.id}`}>
                         <img
                           className="card"
                           src={`https://image.tmdb.org/t/p/w200${results.poster_path}`}

@@ -9,6 +9,7 @@ import { WatchlistPage } from "./pages/WatchlistPage";
 import { WatchedPage } from "./pages/WatchedPage";
 import { GlobalProvider } from "./context/GlobalState";
 import { AddToWatchlist } from "./pages/ADDPage copy";
+import { Homepage_shows } from "./pages/Homepage_shows";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
   <BrowserRouter>
         <Routes>
           <Route path="/" element={<Homepage />} />
+          <Route path="/shows" element={<Homepage_shows />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/details/:movieType/:movieId" element={<DetailPAGE />} />
