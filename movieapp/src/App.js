@@ -17,7 +17,7 @@ function App() {
       <GlobalProvider>
   <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Homepage />} />
+          <Route path="/movies" element={<Homepage />} />
           <Route path="/shows" element={<Homepage_shows />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />

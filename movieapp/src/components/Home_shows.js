@@ -12,19 +12,37 @@ export function Home_shows() {
 
   useEffect(() => {
     console.log(`aqui vai ${count}`);
+    if(window.location.href.includes('id')){
+      console.log(window.location.href.split('id=')[1]);
       fetch(
-          `https://api.themoviedb.org/3/tv/popular?api_key=723206ae2e0c5c92763af7ff78b43766&language=en-US&page=${count}`
-      )
-          .then((res) => res.json())
-          .then((data) => {
-              if (!data.errors) {
-                  setResults(data);
-                  console.log(data);
+        `https://api.themoviedb.org/3/tv/popular?api_key=723206ae2e0c5c92763af7ff78b43766&language=en-US&page=${count}&with_genres=${window.location.href.split('id=')[1]}`
+    )
+        .then((res) => res.json())
+        .then((data) => {
+            if (!data.errors) {
+                setResults(data);
+                console.log(data);
 
-              } else {
-                  setResults({});
-              }
-          });
+            } else {
+                setResults({});
+            }
+        });
+    }else{
+      fetch(
+        `https://api.themoviedb.org/3/tv/popular?api_key=723206ae2e0c5c92763af7ff78b43766&language=en-US&page=${count}`
+    )
+        .then((res) => res.json())
+        .then((data) => {
+            if (!data.errors) {
+                setResults(data);
+                console.log(data);
+
+            } else {
+                setResults({});
+            }
+        });
+    }
+      
 
 if( count > 1){
   setPrevious("block");

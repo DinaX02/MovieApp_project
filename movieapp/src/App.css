@@ -646,19 +646,89 @@ a {
   border-radius: 10px;
 }
 
-.header {
+/* .header {
   width: 200px;
   font-size: 20px;
   margin-bottom: -12px;
   margin-left: 10px;
+} */
+
+.dropper{
+  display: flex;
+  flex-direction: row;
+  margin-left: 2.5em;
+
+  
 }
-.cate {
+.dropper label{
+  margin-right: -3em;
+  padding-top: 0.5em;
+}
+.drop{
+  margin-left: 2em;
+  width: 10.5em;
+  border-radius: 5px !important;
+  font-weight: 500;
+color: #480202;
+  outline: none;
+  border: none;
+  margin-bottom: -1em !important;
+}
+
+
+.droplace{
+  border-radius: 20px !important;
+  font-weight: 500;
+  padding-left: 0.5em;
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  color: #480202;
+
+}
+.dropmenu{
+  margin-left: 2em;
+  padding-left: 0.5em;
+  color: #480202 !important;
+  cursor: pointer;
+  width: 8em;
+  border-radius: 5px !important;
+  font-weight: 500;
+  margin-top: 0.2em !important;
+}
+.dropmenu::-webkit-scrollbar {
+  width: 10px;  
+}
+
+.dropmenu::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background-color: #e7e7e7;
+  border: 1px solid #cacaca;
+}
+
+.dropmenu::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: #363636;
+
+}
+.heading{
+  display: flex;
+  flex-direction: row;
+  margin-top: -1em;
+}
+
+.heading h2{
+  margin-left: 1.7em;
+}
+
+/* .cate {
   font-size: 17px;
   padding-bottom: 10px;
   margin-left: 10px;
-}
+} */
 
-.selector {
+/* .selector {
   display: flex;
   flex-direction: row;
   overflow-x: scroll;
@@ -707,7 +777,7 @@ a {
   cursor: pointer;
   margin-left: 2.5em;
   margin-top: 1em;
-}
+} */
 
 
 
@@ -715,7 +785,7 @@ a {
   color: #fff !important;
   border: #fff solid 2px !important;
   background-color: #480202;
-  border-radius: 100px;
+  border-radius: 5px;
   font-weight: 300;
   font-size: 20px;
   min-width: 10em;
