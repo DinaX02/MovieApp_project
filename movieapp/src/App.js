@@ -10,13 +10,14 @@ import { WatchedPage } from "./pages/WatchedPage";
 import { GlobalProvider } from "./context/GlobalState";
 import { AddToWatchlist } from "./pages/ADDPage copy";
 import { Homepage_shows } from "./pages/Homepage_shows";
-
+import { LandingPage } from "./pages/LandingPage";
 function App() {
   return (
     <div className="App">
       <GlobalProvider>
   <BrowserRouter>
         <Routes>
+        <Route path="/" element={<LandingPage />} />
           <Route path="/movies" element={<Homepage />} />
           <Route path="/shows" element={<Homepage_shows />} />
           <Route path="/login" element={<LoginPage />} />
