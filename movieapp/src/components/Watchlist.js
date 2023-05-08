@@ -58,18 +58,3 @@ export function Watchlist() {
 
 
 
-    {/*  <div className="card_movie">
-      <img className="img_card"
-            src={require("../assets/landscape_test_st.jpg")}/>
-            <div className="year_title_director">
-        <h4>Film Title</h4>
-        <div className="flex-row">
-          <div className="director-name">
-            <h4>Director Name</h4>
-          </div>
-          <div className="year_film">
-            <p>Year</p>
-          </div>
-          </div>
-          </div>
-      </div>*/} 

@@ -1,11 +1,15 @@
 import '../App.css';
 import Navbar from '../components/Navbar'
+import { HeroLandingPage } from '../components/HeroLandinfPage';
+import { HeroLandingPageInfo } from '../components/LandingPageInfo';
+
 
 export function LandingPage() {
     return (
       <div className="homepage">
       <Navbar/>
-      <h1>nova homepage</h1>
+      <HeroLandingPage/>
+      <HeroLandingPageInfo/>
       </div>
     );
   }

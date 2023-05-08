@@ -74,6 +74,108 @@ body {
   display: none;
 }
 
+/* /////////////////////new landing page/////////////////*/
+
+.landing_btn{
+  padding: 1.5em 2em;
+  background-color: #DB0000;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 15px;
+  letter-spacing: 4px;
+  overflow: hidden;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.space-top_try{
+  margin-top: 1.5em;
+}
+
+.masterofdiscaise{
+  margin-right:1em;
+}
+
+.landing_btn:hover{
+    background: #DB0000;
+    color: white;
+    box-shadow: 0 0 5px #DB0000,
+                0 0 25px #DB0000,
+                0 0 50px #DB0000,
+                0 0 200px #DB0000;
+}
+
+
+
+
+
+.hero_landing_page{
+ /* height: calc(100vh - 90px);*/
+ height: 55.5vh;
+ display: flex;
+ flex-direction: row;
+}
+
+.hero_text_40{
+  width: 40%;
+  display: flex;
+    flex-direction: column;
+}
+
+.spacing_left{
+  margin-top: 3em;
+  margin-left: 36px;
+}
+
+.info_landing_page{
+  height: 35vh;
+  background-color: #520909;
+ /* margin-bottom: 4em;*/
+  display: flex;
+  align-items: center !important;
+  flex-direction: row;}
+
+
+  .btn_try_yrlf{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .space_bot{
+    margin-bottom: 3em;
+  }
+
+.img_ifo{
+  margin-left: 36px;
+  width: 370px;
+  margin-right: 1em;
+  max-height: 35vh;
+}
+
+.info_img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  margin-right: 1.5em;
+}
+
+.info_text{
+  justify-content: center;
+  width: 60%;
+  height: 35vh;
+  margin-right: 36px;
+  margin-left: 36px;
+  display: flex;
+  flex-direction: column !important;
+
+}
+
+.size_text{
+  width: 80%;
+}
 /* /////////////////////antiga navbar /////////////////*/
 
 /*
@@ -848,10 +950,14 @@ color: #480202;
 
 
 
-@media (max-width: 768px) {
+@media (max-width: px) {
   .results {
     max-height: 400px;
   }
+
+.info_landing_page{
+  flex-direction: column !important;
+}
 
   .poster_filme {
     display: flex;
@@ -912,6 +1018,10 @@ color: #480202;
     max-height: 250px !important;
   }
 
+  .img_ifo{
+    width: 260px;
+    margin-right: 36px;
+  }
 }
 
 
