@@ -1,6 +1,5 @@
 import "../App.css";
 import React from "react";
-import { ReactComponent as Logo } from "../assets/logo.svg";
 import { Link } from "react-router-dom";
 
 export function HeroLandingPage() {
