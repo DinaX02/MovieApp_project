@@ -266,6 +266,9 @@ body {
   flex-wrap: wrap;
 }
 
+.btn_3_header{
+  margin-right: 36px;
+}
 .input-searchWlist {
   display: flex;
   margin-top: 2em;
@@ -343,7 +346,7 @@ body {
   background-color: darkred;
   margin-top: -69px;
   margin-bottom: 2em;
-  border-radius: 0 0 15px 15px;
+  border-radius: 0 0 12px 12px;
   position: relative;
 }
 
@@ -773,6 +776,8 @@ a {
   }
 }
 
+
+
 @media (max-width: 768px) {
   .results {
     max-height: 400px;
@@ -836,13 +841,18 @@ a {
   .results {
     max-height: 250px !important;
   }
+
 }
 
 
 
 @media (max-width: 550px) {
 
-
+  .btn_3_header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
   .total{
     margin-right: 0;
   }

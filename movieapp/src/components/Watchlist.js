@@ -13,10 +13,11 @@ export function Watchlist() {
 
   return (
     <div>
+      <div className="btn_3_header">
       <Link to={"/watchlist"}><button className={'sele'}>Watchlist</button></Link>
       <Link to={"/watchedlist"} ><button className={'clicked sele'}>Watched</button></Link>
       <Link to={"/addToWatchlist"}><button className={'clicked sele'}>+ Add</button></Link>
-
+      </div>
       <div className="header_watchlist">
         <h1 className="space_title">Watchlist</h1>
         <h4 className="space_end">Need to Watch ASAP</h4>
