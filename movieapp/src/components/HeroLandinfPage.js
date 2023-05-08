@@ -1,7 +1,7 @@
 import "../App.css";
 import React from "react";
 import { Link } from "react-router-dom";
-
+import Hero from "../assets/hero.png"
 export function HeroLandingPage() {
   return (
     <div className="hero_landing_page">
@@ -13,6 +13,8 @@ export function HeroLandingPage() {
         <Link to={"/shows"}><button className="landing_btn">TV Shows</button></Link>
         </div>
         </div>
+        <img src={Hero}></img>
+
     </div>
   );    
 }
