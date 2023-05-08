@@ -10,15 +10,20 @@ export function Selector() {
   const navigate = useNavigate();
   let [red, setRed] = useState (false);
   let [chave, setChave] = useState ({});
-
+  let valueToFind;
   const options = [
     { value: 1, label: "Popular" }, { value: 28, label: "Action" }, { value: 12, label: "Adventure" }, { value: 16, label: "Animation" }, { value: 35, label: "Comedy" }, { value: 80, label: "Crime" }, { value: 99, label: "Docmentary" },  { value: 18, label: "Drama" }, { value: 10751, label: "Family" }, { value: 14, label: "Fantasy" }, { value: 36, label: "History" }, { value: 27, label: "Horror" }, { value: 10402, label: "Music" }, { value: 9648, label: "Mystery" }, { value: 10749, label: "Romance" }, { value: 878, label: "Science Fiction" }, { value: 10770, label: "Tv Movie" }, { value: 53, label: "Thriller" }, { value: 10752, label: "War" }, { value: 37, label: "Western" },
   ];
-  const defaultOption = options[0];
+  if(window.location.href.includes('id')){
+  valueToFind = window.location.href.split('id=')[1];
+  }else{
+    valueToFind = 1;
+  }
 
-  
+  const foundOption = options.find((option) => {return option.value == valueToFind});
+
+
   const onselect = (key) => {
-    console.log(key.value);
     setChave(key.value);
     setRed(true);
   }
@@ -53,7 +58,7 @@ useEffect(() =>{
       
         <div className='dropper'>
 <label>Category: </label>
-<Dropdown name="drop" options={options} onChange={onselect} placeholder="Popular" controlClassName='drop' placeholderClassName='droplace'  menuClassName='dropmenu'  className='drop'/>
+<Dropdown name="drop" options={options} onChange={onselect} placeholder={foundOption.label} controlClassName='drop' placeholderClassName='droplace'  menuClassName='dropmenu'  className='drop'/>
 
 </div>
 

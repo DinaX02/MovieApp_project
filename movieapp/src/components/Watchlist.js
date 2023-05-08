@@ -1,7 +1,6 @@
 import "../App.css";
 import React, {useContext} from "react";
 import { GlobalContext } from "../context/GlobalState";
-import { Add } from "./Add";
 import { MovieCard } from "./MovieCard";
 import { Watched } from "./Watched";
 import { Link } from "react-router-dom";

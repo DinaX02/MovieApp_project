@@ -884,7 +884,22 @@ color: #480202;
   margin-top: 1em;
 } 
 
-
+.showless{
+  color: gray !important;
+  border: gray solid 2px !important;
+  background-color: #480202;
+  border-radius: 5px;
+  font-weight: 300;
+  font-size: 20px;
+  min-width: 10em;
+  height: 1.8em;
+  outline: none;
+  border: none;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
 
 .showmore {
   color: #fff !important;

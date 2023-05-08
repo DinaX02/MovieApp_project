@@ -8,12 +8,10 @@ let page=0;
 export function Home() {
   const [results,setResults] = useState({});
   const [count, setCount] = useState(1);
-  const [previous, setPrevious] = useState("none");
+  const [previous, setPrevious] = useState({class:"showless", click:() => {setCount(count - 1)}});
 
   useEffect(() => {
-    console.log(`aqui vai ${count}`);
     if(window.location.href.includes('id')){
-      console.log(window.location.href.split('id=')[1]);
       fetch(
           `https://api.themoviedb.org/3/movie/popular?api_key=723206ae2e0c5c92763af7ff78b43766&language=en-US&page=${count}&with_genres=${window.location.href.split('id=')[1]}`
       )
@@ -21,7 +19,6 @@ export function Home() {
           .then((data) => {
               if (!data.errors) {
                   setResults(data);
-                  console.log(data);
 
               } else {
                   setResults({});
@@ -35,7 +32,6 @@ export function Home() {
             .then((data) => {
                 if (!data.errors) {
                     setResults(data);
-                    console.log(data);
   
                 } else {
                     setResults({});
@@ -44,14 +40,13 @@ export function Home() {
         }
 
 if( count > 1){
-  setPrevious("block");
+  setPrevious({class:"showmore", click:() => {setCount(count - 1);}});
 }else{
-  setPrevious("none");
+  setPrevious({class:"showless", click:undefined});
 
 }
 
   }, [count]);
-
 
 
     return (
@@ -79,10 +74,11 @@ if( count > 1){
                       </div>
               ))}
               <br/>
+
               </div>
-              <button onClick={() => {setCount(count - 1);   console.log(count);}} className={"showmore"} style={{display: previous}}>Previous Page</button>
+              <button onClick={previous.click} className={previous.class}>Previous Page</button>
               
-              <button onClick={() => {setCount(count + 1);   console.log(count);}} className={"showmore"}>Next Page</button>
+              <button onClick={() => {setCount(count + 1);}} className={"showmore"}>Next Page</button>
       
       </div>
     );
