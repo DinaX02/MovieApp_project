@@ -29,7 +29,7 @@ export function Watchlist() {
 <div>
 <div className="total">
       <span className="total_films">
-       {watchlist.length} {Watched.length === 1 ? "Movie" : "Movies"}
+       {watchlist.length} {watchlist.length === 1 ? "Movie" : "Movies"}
       </span></div>
 
 <div className="movie-grid">
