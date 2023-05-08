@@ -12,7 +12,7 @@ const Navbar = ()=> {
            <Link to={"/"}><Logo className={"logo"} /></Link> 
             </span>
             <div className={`nav-items ${isOpen && "open"}`}>
-                <Link to={"/"}>Movies </Link>
+                <Link to={"/movies"}>Movies </Link>
                 <Link to={"/shows"}>Tv Shows</Link>
                 <Link to={"/watchlist"}>Your Watchlist</Link>
                  <div className="space_search_bar">

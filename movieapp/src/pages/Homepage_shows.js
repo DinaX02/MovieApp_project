@@ -6,7 +6,11 @@ import { Selector } from '../components/Selector';
 export function Homepage_shows() {
     return (
       <div className="homepage">
+             
       <Navbar/>
+      <div  className='heading'>
+<h2>Tv Shows</h2>
+</div>
       <Selector/>
       <Home_shows/>
       </div>
