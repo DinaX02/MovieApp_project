@@ -901,6 +901,7 @@ color: #480202;
   margin-right: 0.5em;
 }
 
+
 .showmore {
   color: #fff !important;
   border: #fff solid 2px !important;
@@ -946,6 +947,11 @@ color: #480202;
 }
 
 /* media querrys */
+@media (max-width: 1600px) {
+  .results {
+    max-height: 490px;
+  }
+}
 
 @media (max-width: 1500px) {
   .results {
@@ -965,9 +971,14 @@ color: #480202;
 
 
 
-@media (max-width: px) {
+@media (max-width: 768px) {
   .results {
     max-height: 400px;
+    margin-right: 1em;
+  }
+
+  .movie-grid{
+    justify-content: center;
   }
 
 .info_landing_page{
@@ -1054,7 +1065,7 @@ color: #480202;
   .results {
     overflow-x: hidden !important;
     margin-right: 1em;
-    max-height: 306px;
+    max-height: 295px;
   }
 
   .result-card .controls button {
