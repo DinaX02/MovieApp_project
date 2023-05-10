@@ -4,6 +4,8 @@ import { useParams, useNavigate } from "react-router-dom";
 import "../App.css";
 import Navbar from "./Navbar";
 import React, {useContext, useEffect, useState} from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faArrowLeft} from '@fortawesome/free-solid-svg-icons'
 import { GlobalContext } from "../context/GlobalState";
 
 export function Details() {
@@ -60,9 +62,11 @@ export function Details() {
     return (
         <div className="homepage">
             <Navbar />
-
+            <div className="div_btn_back">
+            <button onClick={goBack} className="btn_back_space"><FontAwesomeIcon icon={faArrowLeft} size="2xl" style={{color: "#ffffff",}} /></button>
+            </div>
             <div className="geral_content_detail">
-                <button onClick={goBack}>Back</button>
+                
                 <div className="poster_filme">
                     <div className="img_poster">
                         <img
@@ -70,9 +74,9 @@ export function Details() {
                             src={`https://image.tmdb.org/t/p/w500////${results.poster_path}`}
                         />
                         <div className="btn_add">
-                            <div className="controls">
+                            <div className="btn_add_geral_div">
                                 <button
-                                    className="btn"
+                                    className="input_add_to_wth"
                                     disabled={watchlistDisabled}
                                     onClick={() => addMovieToWatchlist(results)}
                                 >
@@ -80,7 +84,7 @@ export function Details() {
                                 </button>
 
                                 <button
-                                    className="btn"
+                                    className="input_add_to_wth"
                                     disabled={watchedDisabled}
                                     onClick={() => addMovieToWatched(results)}
                                 >

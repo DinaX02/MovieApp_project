@@ -1205,6 +1205,37 @@ color: #480202;
 
 /* details_page */
 
+
+.div_btn_back{
+  display: flex;
+  width: 100%;
+}
+.btn_back_space{
+  background: transparent;
+  outline: none;
+  border: none;
+  margin-top: 1em;
+  margin-left: 36px;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn_add_geral_div{
+  display: flex;
+  flex-direction: column;
+}
+
+.input_add_to_wth {
+  margin-top: 1.5em;
+  width: 315px;
+  height: 45px;
+  background-color: transparent;
+  border: 3px solid white;
+  border-radius: 25px;
+  padding-left: 1em;
+  color: white;
+}
+
 .poster {
   border-radius: 15px;
   width: 350px;
@@ -1247,6 +1278,7 @@ color: #480202;
 .poster_filme {
   display: flex;
   flex-direction: row;
+  margin-top: -3em;
   /*
   background-image: url('./assets/landscape_test_st.jpg');
   height: auto;
