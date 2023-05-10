@@ -1,15 +1,27 @@
 import { Link } from "react-router-dom";
 import defaultImage from "../assets/default_cast.jpg";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import "../App.css";
 import Navbar from "./Navbar";
-import { useEffect, useState } from "react";
+import React, {useContext, useEffect, useState} from "react";
+import { GlobalContext } from "../context/GlobalState";
 
 export function Details() {
     const [results, setResults] = useState({});
     const [actors, setActors] = useState({});
     const { movieId } = useParams();
     const { movieType } = useParams();
+    const {
+        addMovieToWatchlist,
+        addMovieToWatched,
+        watchlist,
+        watched,
+    } = useContext(GlobalContext);
+
+    const navigate = useNavigate();
+    const goBack = () => {
+        navigate(-1);
+    }
 
     useEffect(() => {
         Promise.all([
@@ -19,7 +31,7 @@ export function Details() {
             .then(([res1, res2]) => Promise.all([res1.json(), res2.json()]))
             .then(([data1, data2]) => {
                 if (!data1.errors) {
-                    setResults(data1);
+                    setResults({...data1, media_type: movieType});
                     console.log(data1);
                 } else {
                     setResults({});
@@ -33,11 +45,24 @@ export function Details() {
             });
     }, []);
 
+    let storedMovie = watchlist.find((o) => o.id === movieId);
+    let storedMovieWatched = watched.find((o) => o.id === movieId);
+
+    const watchlistDisabled = storedMovie
+        ? true
+        : storedMovieWatched
+            ? true
+            : false;
+
+    const watchedDisabled = storedMovieWatched ? true : false;
+
+
     return (
         <div className="homepage">
             <Navbar />
 
             <div className="geral_content_detail">
+                <button onClick={goBack}>Back</button>
                 <div className="poster_filme">
                     <div className="img_poster">
                         <img
@@ -45,24 +70,42 @@ export function Details() {
                             src={`https://image.tmdb.org/t/p/w500////${results.poster_path}`}
                         />
                         <div className="btn_add">
-                            <Link to={"/watchlist"}>
-                                <button className="btn_add_watchlist">
-                                    Add to Whatchist
+                            <div className="controls">
+                                <button
+                                    className="btn"
+                                    disabled={watchlistDisabled}
+                                    onClick={() => addMovieToWatchlist(results)}
+                                >
+                                    Add to Watchlist
                                 </button>
-                            </Link>
+
+                                <button
+                                    className="btn"
+                                    disabled={watchedDisabled}
+                                    onClick={() => addMovieToWatched(results)}
+                                >
+                                    Add to Watched
+                                </button>
+                            </div>
                         </div>
                     </div>
 
                     <div className="info_about">
                         <h1>{results.name}{results.title}</h1>
           <div className="genres_filmes">
-            <button className="btn_genres">Drama</button>
-            <button className="btn_genres">Sci-Fi & Fantasy</button>
-            <button className="btn_genres">Mystery</button>
-          </div>
+              {results.genres &&
+              results.genres.map((genre) => (
+                  <button key={genre.id} className="btn_genres">{genre.name}</button>
+              ))}
 
-          <h3 className="space_top">Number of Seasons:  <span>{results.number_of_seasons}</span></h3>
-          <h3 className="space_top">Total episodes:  <span>{results.number_of_episodes}</span></h3>
+          </div>
+                        {movieType !== "movie" ? (
+                            <div>
+                                <h3 className="space_top">Number of Seasons:  <span>{results.number_of_seasons}</span></h3>
+                            <h3 className="space_top">Total episodes:  <span>{results.number_of_episodes}</span></h3>
+                            </div>
+                        ) : ""}
+
           <h3 className="space_top">Overview</h3>
           <p className="overview_text">
           {results.overview}
