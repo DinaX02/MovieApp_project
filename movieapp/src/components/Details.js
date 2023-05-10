@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import defaultImage from "../assets/default_cast.jpg";
+//import defaultImage from "../assets/default_cast.jpg";
+import newDefaultImage from "../assets/no_img_available.png"
 import { useParams, useNavigate } from "react-router-dom";
 import "../App.css";
 import Navbar from "./Navbar";
@@ -124,7 +125,7 @@ export function Details() {
                       {cast.profile_path ? (
                           <img className="cast_img" src={`https://image.tmdb.org/t/p/w500////${cast.profile_path}`}/>
                       ) : (
-                          <img className="cast_img" src={defaultImage}/>
+                          <img className="cast_img" src={newDefaultImage}/>
                       )}
                       <p className="name_cast">{cast.name}</p>
                   </div>
