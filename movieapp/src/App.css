@@ -120,6 +120,7 @@ body {
  display: flex;
  flex-direction: column;
  align-items: center;
+ background-image: linear-gradient(#0c0909, #480202);
 }
 .hero_text_40{
   display: flex;
