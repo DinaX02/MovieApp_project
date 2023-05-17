@@ -135,7 +135,7 @@ body {
     margin: 0;
   }
   .hero_landing_page{
-    margin-top: 5em;
+    padding: 20px;
     flex-direction: column-reverse;
          }
 
@@ -153,7 +153,7 @@ body {
 
 @media only screen and (min-width: 1260px) {
   .hero_landing_page{
-height: 55.5vh;
+height: 50%;
  display: flex;
  flex-direction: row;
  justify-content: center;
@@ -170,7 +170,7 @@ height: 55.5vh;
       align-items: start;
   }
   .bg_info{
-    padding-bottom: 0 !important;
+    padding: 0 !important;
   }
   .info_img{
     margin-left: 4vw !important;
@@ -186,11 +186,8 @@ height: 55.5vh;
 
 .bg_info{
   background-color: #520909;
-  padding-right: 5vw !important;
-  padding-left: 6vw !important;
-  padding-bottom: 4em;
-  padding-top: 2em !important;
 }
+
 .bg_info p{
   max-width: 70%;
   text-align: center;
@@ -1262,6 +1259,7 @@ color: #480202;
   margin-left: 36px;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .btn_add_geral_div{
@@ -1278,6 +1276,12 @@ color: #480202;
   border-radius: 25px;
   padding-left: 1em;
   color: white;
+  cursor: pointer;
+}
+
+.input_add_to_wth:disabled{
+  cursor: auto;
+  opacity: 30%;
 }
 
 .poster {
@@ -1347,6 +1351,9 @@ color: #480202;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  max-height: 382px;
+  overflow-y: auto;
+  margin: 10px;
 }
 
 .name_and_photo_cast {
@@ -1366,4 +1373,9 @@ color: #480202;
 
 .overview_text {
   max-width: 90%;
+}
+
+
+.land{
+  height: calc(100vh - 90px);
 }

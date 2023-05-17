@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-//import defaultImage from "../assets/default_cast.jpg";
 import newDefaultImage from "../assets/no_img_available.png"
 import { useParams, useNavigate } from "react-router-dom";
 import "../App.css";
@@ -48,17 +47,8 @@ export function Details() {
             });
     }, []);
 
-    let storedMovie = watchlist.find((o) => o.id === movieId);
-    let storedMovieWatched = watched.find((o) => o.id === movieId);
-
-    const watchlistDisabled = storedMovie
-        ? true
-        : storedMovieWatched
-            ? true
-            : false;
-
-    const watchedDisabled = storedMovieWatched ? true : false;
-
+    const watchlistDisabled = watchlist.some((movie) => movie.id === results.id);
+    const watchedDisabled = watched.some((movie) => movie.id === results.id);
 
     return (
         <div className="homepage">
@@ -118,7 +108,7 @@ export function Details() {
 
           <h3 className="space_top">Cast</h3>
 
-          <div className="div_general_cast">
+          <div id={"style-13"} className="div_general_cast">
               {actors.cast &&
               actors.cast.map((cast) => (
                   <div key={cast.id} className="name_and_photo_cast">

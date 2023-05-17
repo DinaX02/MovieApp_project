@@ -8,8 +8,11 @@ export function LandingPage() {
     return (
       <div className="homepage">
       <Navbar/>
-      <HeroLandingPage/>
-      <HeroLandingPageInfo/>
+      <div className={"land"}>
+          <HeroLandingPage/>
+          <HeroLandingPageInfo/>
+      </div>
+
       </div>
     );
   }
